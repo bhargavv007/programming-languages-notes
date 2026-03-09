@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact — Bhargav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<header>
+    <h1 class="logo">Bhargav</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact">
+    <h2 class="animated-text">Get In Touch</h2>
+
+    <form>
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Message</label>
+        <textarea rows="5" placeholder="Enter your message"></textarea>
+
+        <button class="animated-btn">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 Bhargav🧑🏻‍💻. All Rights Reserved.
+</footer>
+
+<script>
+window.onload = function() {
+    document.getElementById("preloader").style.display = "none";
+}
+</script>
+
+
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
+
+    let error = "";
+
+    if (name.value.trim() === "") error += "Name is required.\n";
+    if (email.value.trim() === "") error += "Email is required.\n";
+    if (!email.value.includes("@")) error += "Enter a valid email.\n";
+    if (message.value.trim().length < 10) error += "Message must be at least 10 characters.\n";
+
+    if (error !== "") {
+        alert(error);
+        return false;
+    }
+
+    return true;
+}
+</script>
+
+
+</body>
+</html>

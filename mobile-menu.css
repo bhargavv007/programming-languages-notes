@@ -1,0 +1,17 @@
+@media(max-width: 700px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #003366;
+        padding: 15px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+        color: white;
+    }
+}
