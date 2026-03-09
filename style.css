@@ -1,0 +1,632 @@
+/* ----------- GLOBAL ----------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    background: #003366;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideDown 0.8s ease;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    animation: fadeIn 1.3s ease;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* ----------- HERO SECTION ----------- */
+.hero {
+    background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d')
+        no-repeat center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* ----------- SERVICES SECTION ----------- */
+.services {
+    padding: 60px;
+    text-align: center;
+}
+
+.service-box {
+    background: white;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #dcdcdc;
+    display: inline-block;
+    width: 28%;
+    animation: slideUp 1s ease;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px #c8c8c8;
+}
+
+/* ----------- CONTACT FORM ----------- */
+.contact {
+    padding: 60px;
+    animation: fadeIn 1s ease;
+}
+
+form {
+    width: 40%;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #ccc;
+    animation: slideUp 1s ease;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #003366;
+    transform: scale(1.02);
+}
+
+/* ----------- ANIMATED BUTTON ----------- */
+.animated-btn {
+    padding: 12px 22px;
+    background: linear-gradient(90deg, #003366, #0066cc, #003366);
+    background-size: 200%;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.4s;
+    animation: gradientMove 4s ease infinite;
+}
+
+.animated-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* ----------- ANIMATED HEADING ----------- */
+.animated-text {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff, #ffcc00, #ffffff);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+/* ----------- TYPEWRITER ----------- */
+.typewriter {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.typewriter span {
+    border-right: 3px solid white;
+    padding-right: 6px;
+    white-space: nowrap;
+}
+
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 360px; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+/* ----------- FOOTER ----------- */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    animation: fadeIn 1.5s ease;
+}
+
+/* ----------- PRELOADER ----------- */
+#preloader {
+    background: #ffffff;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 8px solid #ddd;
+    border-top: 8px solid #003366;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1.3s linear infinite;
+}
+
+/* ------------ RESPONSIVE DESIGN ------------ */
+
+/* Tablets */
+@media(max-width: 900px) {
+    .service-box {
+        width: 40%;
+    }
+
+    form {
+        width: 60%;
+    }
+}
+
+/* Mobile */
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .service-box {
+        width: 80%;
+    }
+
+    form {
+        width: 85%;
+    }
+}
+
+/* ----------- ANIMATIONS ----------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shine {
+    0% { background-position: 0%; }
+    100% { background-position: 300%; }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0%; }
+    50% { background-position: 100%; }
+    100% { background-position: 0%; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 280px; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* ===== HERO WITH 3D PARTICLES ===== */
+.hero {
+    position: relative;
+    height: 70vh;
+    background: #0d1117;
+    overflow: hidden;
+}
+
+/* Particles canvas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Content above particles */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.documents {
+    padding: 60px;
+    background: #f8fafc;
+}
+
+.documents h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.doc-category {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #e5e7eb;
+}
+
+.doc-category h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.doc-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.doc-category li {
+    margin: 8px 0;
+}
+
+.doc-category a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.doc-category a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ===== DOCUMENTS SECTION ===== */
+.documents {
+    padding: 60px;
+    background: #f8fafc;
+}
+
+.documents h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.doc-category {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #e5e7eb;
+}
+
+.doc-category h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.doc-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.doc-category li {
+    margin: 8px 0;
+}
+
+.doc-category a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.doc-category a:hover {
+    text-decoration: underline;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* PDF button inside service box */
+.pdf-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.pdf-btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+.pdf-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.pdf-btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+/* ----------- DARK MODE ----------- */
+.dark-mode {
+    background: #0d1117;
+    color: #e2e8f0;
+}
+
+.dark-mode header {
+    background: #111827;
+}
+
+.dark-mode .service-box {
+    background: #1f2937;
+    color: #e5e7eb;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.dark-mode .pdf-btn {
+    background: #3b82f6;
+}
+
+.dark-mode footer {
+    background: #111827;
+}
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-decoration: none;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.2);
+}
+
+
+
+.whatsapp-btn {
+    background: rgba(37, 211, 102, 0.25);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.4);
+}
+.glow {
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+
+
+
+
+
+
+form {
+    width: 40%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+input, textarea {
+    background: rgba(255,255,255,0.20);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+}
+.whatsapp-btn {
+    background: rgba(37, 211, 102, 0.25);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.4);
+}
+.glow {
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+
+
+
+
+.pdf-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pdf-btn {
+    padding: 8px 14px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.pdf-btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+.pdf-btn.outline {
+    background: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.pdf-btn.outline:hover {
+    background: #2563eb;
+    color: white;
+}
+
+
+.pdf-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999;
+}
+.pdf-content {
+    background: white;
+    width: 80%;
+    height: 80%;
+    margin: 5% auto;
+    position: relative;
+}
+.pdf-content iframe {
+    width: 100%;
+    height: 100%;
+}
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* ===== GLARE HOVER EFFECT ===== */
+.service-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.35) 50%,
+        transparent 60%
+    );
+    transform: translateX(-100%) rotate(25deg);
+    transition: transform 0.6s ease;
+}
+
+.service-box:hover::before {
+    transform: translateX(100%) rotate(25deg);
+}
+/* ===== SCROLL STACK EFFECT ===== */
+.stack {
+    position: sticky;
+    top: 120px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.stack:nth-child(1) { z-index: 4; }
+.stack:nth-child(2) { z-index: 3; }
+.stack:nth-child(3) { z-index: 2; }
+.stack:nth-child(4) { z-index: 1; }

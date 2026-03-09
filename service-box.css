@@ -1,0 +1,32 @@
+/* Scroll Animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.service-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 25px;
+    margin: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+
